@@ -26,7 +26,7 @@ const FinalCTA = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
-            <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 px-10 py-4 text-lg rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+            <Button size="lg" className="bg-blue-500 hover:bg-blue-600 text-white px-10 py-4 text-lg rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
               <Calendar className="mr-2 w-5 h-5" />
               Agendar Sessão de Estudo
             </Button>
@@ -46,8 +46,8 @@ const FinalCTA = () => {
               <div className="text-blue-200">Acompanhamento semanal</div>
             </div>
             <div className="p-6">
-              <div className="text-3xl font-bold text-blue-100 mb-2">24/7</div>
-              <div className="text-blue-200">Suporte especializado</div>
+              <div className="text-3xl font-bold text-blue-100 mb-2">Suporte Premium</div>
+              <div className="text-blue-200">Atendimento especializado</div>
             </div>
           </div>
         </div>
