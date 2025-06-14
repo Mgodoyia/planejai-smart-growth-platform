@@ -2,6 +2,7 @@
 import Hero from "@/components/Hero";
 import PainPoints from "@/components/PainPoints";
 import Features from "@/components/Features";
+import SystemShowcase from "@/components/SystemShowcase";
 import Benefits from "@/components/Benefits";
 import Testimonials from "@/components/Testimonials";
 import TechStack from "@/components/TechStack";
@@ -14,6 +15,7 @@ const Index = () => {
       <Hero />
       <PainPoints />
       <Features />
+      <SystemShowcase />
       <Benefits />
       <Testimonials />
       <TechStack />

@@ -1,5 +1,6 @@
 
 import { Sparkles, Mail, Phone, MapPin } from "lucide-react";
+import Logo from "./Logo";
 
 const Footer = () => {
   return (
@@ -8,10 +9,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="md:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
-              <Sparkles className="w-8 h-8 text-blue-400" />
-              <span className="text-2xl font-bold">Planej.AI</span>
-            </div>
+            <Logo className="mb-4" />
             <p className="text-gray-400 mb-6 max-w-md">
               A plataforma de inteligência artificial que revoluciona a gestão de lojas de móveis planejados no Brasil.
             </p>
