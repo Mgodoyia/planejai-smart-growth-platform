@@ -1,5 +1,5 @@
 
-import { Instagram } from "lucide-react";
+import { Instagram, Youtube } from "lucide-react";
 import Logo from "./Logo";
 
 const Footer = () => {
@@ -40,6 +40,14 @@ const Footer = () => {
                 className="text-gray-400 hover:text-pink-500 transition-colors"
               >
                 <Instagram className="w-6 h-6" />
+              </a>
+              <a 
+                href="https://www.youtube.com/@PlanejAiautomações" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-red-500 transition-colors"
+              >
+                <Youtube className="w-6 h-6" />
               </a>
             </div>
           </div>
@@ -93,6 +101,12 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="hover:text-white transition-colors"
               >Instagram</a></li>
+              <li><a 
+                href="https://www.youtube.com/@PlanejAiautomações" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-white transition-colors"
+              >YouTube</a></li>
               <li>
                 <button 
                   onClick={() => scrollToSection('testimonials')} 
