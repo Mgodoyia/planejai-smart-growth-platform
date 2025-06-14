@@ -1,4 +1,3 @@
-
 import { TrendingUp, Clock, DollarSign, Truck, Heart, Zap } from "lucide-react";
 
 const Benefits = () => {
@@ -42,7 +41,7 @@ const Benefits = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+    <section id="benefits" className="py-20 bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">

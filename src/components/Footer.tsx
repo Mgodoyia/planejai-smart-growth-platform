@@ -3,6 +3,13 @@ import { Instagram } from "lucide-react";
 import Logo from "./Logo";
 
 const Footer = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <footer className="bg-gray-900 text-white py-16">
       <div className="container mx-auto px-6">
@@ -41,10 +48,38 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Navegação</h4>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="#features" className="hover:text-white transition-colors">Funcionalidades</a></li>
-              <li><a href="#benefits" className="hover:text-white transition-colors">Benefícios</a></li>
-              <li><a href="#testimonials" className="hover:text-white transition-colors">Depoimentos</a></li>
-              <li><a href="#tech-stack" className="hover:text-white transition-colors">Tecnologia</a></li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('features')} 
+                  className="hover:text-white transition-colors text-left"
+                >
+                  Funcionalidades
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('benefits')} 
+                  className="hover:text-white transition-colors text-left"
+                >
+                  Benefícios
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('testimonials')} 
+                  className="hover:text-white transition-colors text-left"
+                >
+                  Depoimentos
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('tech-stack')} 
+                  className="hover:text-white transition-colors text-left"
+                >
+                  Tecnologia
+                </button>
+              </li>
             </ul>
           </div>
           
@@ -58,7 +93,14 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="hover:text-white transition-colors"
               >Instagram</a></li>
-              <li><a href="#testimonials" className="hover:text-white transition-colors">Casos de Sucesso</a></li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('testimonials')} 
+                  className="hover:text-white transition-colors text-left"
+                >
+                  Casos de Sucesso
+                </button>
+              </li>
               <li><a 
                 href="https://wa.me/5548996495426" 
                 target="_blank" 
