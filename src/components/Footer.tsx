@@ -1,5 +1,6 @@
 
 import { Instagram, Youtube } from "lucide-react";
+import { Link } from "react-router-dom";
 import Logo from "./Logo";
 
 const Footer = () => {
@@ -126,7 +127,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-800 mt-8 sm:mt-12 pt-6 sm:pt-8 text-center text-gray-400 text-xs sm:text-sm px-4">
-          <p>&copy; 2025 Planej.AI. Todos os direitos reservados. | Política de Privacidade | Termos de Uso</p>
+          <p>&copy; 2025 Planej.AI. Todos os direitos reservados. | <Link to="/privacy-policy" className="hover:text-white transition-colors">Política de Privacidade</Link> | <Link to="/terms-of-service" className="hover:text-white transition-colors">Termos de Uso</Link></p>
         </div>
       </div>
     </footer>
