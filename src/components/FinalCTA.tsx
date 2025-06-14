@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Calendar, BookOpen, ArrowRight, Sparkles, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -93,10 +94,10 @@ const FinalCTA = () => {
           {/* Trust Indicators */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 opacity-60 px-4">
             {[
-              "✓ Implementação Garantida",
-              "✓ ROI Comprovado",
-              "✓ Suporte 24/7",
-              "✓ Sem Risco"
+              "🚀 Resultados Imediatos",
+              "💰 Aumento de 300% em Vendas",
+              "⚡ Automação Total",
+              "🎯 Leads Qualificados"
             ].map((indicator, index) => (
               <div key={index} className="text-blue-300 font-medium text-sm sm:text-base text-center">
                 {indicator}
