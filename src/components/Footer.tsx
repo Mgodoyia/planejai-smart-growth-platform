@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="md:col-span-2">
-            <Logo className="mb-4 scale-150" />
+            <Logo className="mb-4 scale-200" />
             <p className="text-gray-400 mb-6 max-w-md">
               A plataforma de inteligência artificial que revoluciona a gestão de lojas de móveis planejados no Brasil.
             </p>
@@ -42,8 +42,8 @@ const Footer = () => {
             <ul className="space-y-2 text-gray-400">
               <li><a href="#" className="hover:text-white transition-colors">Funcionalidades</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Integrações</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Preços</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Demo</a></li>
+              <li><a href="#features" className="hover:text-white transition-colors">Características</a></li>
+              <li><a href="#benefits" className="hover:text-white transition-colors">Benefícios</a></li>
             </ul>
           </div>
           
@@ -51,15 +51,25 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Empresa</h4>
             <ul className="space-y-2 text-gray-400">
               <li><a href="#" className="hover:text-white transition-colors">Sobre</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Blog</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Casos de Sucesso</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Contato</a></li>
+              <li><a 
+                href="https://instagram.com/planej.aitec" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-white transition-colors"
+              >Instagram</a></li>
+              <li><a href="#testimonials" className="hover:text-white transition-colors">Casos de Sucesso</a></li>
+              <li><a 
+                href="https://wa.me/5548996495426" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-white transition-colors"
+              >Contato</a></li>
             </ul>
           </div>
         </div>
         
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 Planej.AI. Todos os direitos reservados. | Política de Privacidade | Termos de Uso</p>
+          <p>&copy; 2025 Planej.AI. Todos os direitos reservados. | Política de Privacidade | Termos de Uso</p>
         </div>
       </div>
     </footer>
