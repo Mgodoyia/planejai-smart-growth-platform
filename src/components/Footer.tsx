@@ -7,10 +7,12 @@ const Footer = () => {
     <footer className="bg-gray-900 text-white py-16">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-8">
-          {/* Brand */}
-          <div className="md:col-span-2">
-            <Logo className="mb-6 scale-[4] transform-gpu" />
-            <p className="text-gray-400 mb-6 max-w-md mt-12">
+          {/* Brand - Logo em destaque */}
+          <div className="md:col-span-2 flex flex-col items-start">
+            <div className="mb-8 transform scale-150 origin-left">
+              <Logo className="w-32 h-32" />
+            </div>
+            <p className="text-gray-400 mb-6 max-w-md text-lg">
               A plataforma de inteligência artificial que revoluciona a gestão de lojas de móveis planejados no Brasil.
             </p>
             <div className="flex space-x-4">
