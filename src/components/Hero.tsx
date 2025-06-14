@@ -25,7 +25,7 @@ const Hero = () => {
       {/* Header */}
       <header className="container mx-auto px-6 pt-8 relative z-10">
         <nav className="flex items-center justify-between">
-          <Logo />
+          <Logo className="scale-110" />
           <div className="flex items-center space-x-4">
             <Button className="bg-blue-600 hover:bg-blue-700">
               Sessão de Estudo
@@ -34,9 +34,9 @@ const Hero = () => {
         </nav>
       </header>
       
-      <div className="container mx-auto px-6 pt-20 pb-20 relative z-10">
+      <div className="container mx-auto px-6 pt-16 pb-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div>
+          <div className="lg:pr-8">
             {/* Badge */}
             <Badge className="mb-8 bg-blue-500/20 text-blue-300 border-blue-400/30 hover:bg-blue-500/30 transition-colors">
               <div className="w-4 h-4 mr-2 bg-gradient-to-br from-blue-500 to-purple-500 rounded"></div>
@@ -44,9 +44,14 @@ const Hero = () => {
             </Badge>
             
             {/* Main Headline */}
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-indigo-200 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-white via-blue-100 to-indigo-200 bg-clip-text text-transparent leading-tight">
               Gestão Inteligente
             </h1>
+            
+            {/* Subtitle */}
+            <h2 className="text-2xl md:text-3xl font-semibold text-blue-200 mb-6">
+              para lojas de móveis planejados
+            </h2>
             
             {/* Subheadline */}
             <p className="text-xl md:text-2xl text-blue-100 mb-8 leading-relaxed">
@@ -72,7 +77,7 @@ const Hero = () => {
             </div>
           </div>
           
-          {/* Dashboard Preview */}
+          {/* Login Screen Preview */}
           <div className="relative">
             <Card className="bg-white/10 backdrop-blur-lg border border-white/20 shadow-2xl">
               <CardContent className="p-0">
@@ -82,7 +87,7 @@ const Hero = () => {
                     <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
                     <div className="w-3 h-3 bg-green-400 rounded-full"></div>
                   </div>
-                  <div className="text-xs text-blue-200">Dashboard Planej.AI</div>
+                  <div className="text-xs text-blue-200">Tela de Login Planej.AI</div>
                 </div>
                 <img 
                   src="/lovable-uploads/469cab76-aac0-490c-adbe-7ba31efadedb.png" 
