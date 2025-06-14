@@ -1,5 +1,5 @@
 
-import { AlertTriangle, Clock, TrendingDown, Users, ArrowRight, Zap, Target } from "lucide-react";
+import { AlertTriangle, Clock, TrendingDown, Users, Target, Zap } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const PainPoints = () => {
@@ -59,37 +59,30 @@ const PainPoints = () => {
   ];
 
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-slate-50 via-white to-blue-50/50 relative overflow-hidden">
-      {/* Enhanced Background Pattern */}
-      <div className="absolute inset-0 opacity-[0.02]">
+    <section className="py-20 lg:py-28 bg-gradient-to-br from-slate-50 via-white to-blue-50/30 relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0 opacity-[0.03]">
         <div className="absolute inset-0" style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='1.5'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
           backgroundSize: '60px 60px'
         }}></div>
       </div>
       
-      {/* Floating Decorative Elements */}
-      <div className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-br from-blue-400/10 to-purple-400/10 rounded-full blur-xl"></div>
-      <div className="absolute bottom-20 right-10 w-32 h-32 bg-gradient-to-br from-red-400/10 to-orange-400/10 rounded-full blur-xl"></div>
-      
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
-        {/* Enhanced Header Section */}
-        <div className="text-center mb-16 sm:mb-20 lg:mb-24">
-          <div className="inline-flex items-center gap-3 px-5 py-3 bg-gradient-to-r from-red-100 to-orange-100 border border-red-200/50 text-red-700 rounded-2xl text-sm font-bold mb-8 animate-fadeIn shadow-lg backdrop-blur-sm">
-            <div className="p-1 bg-red-200/50 rounded-lg">
-              <AlertTriangle className="w-4 h-4" />
-            </div>
-            <span>Problemas Críticos Identificados</span>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative">
+        {/* Header Section - Mais compacto e eficiente */}
+        <div className="text-center mb-16 lg:mb-20">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-red-100 to-orange-100 border border-red-200/50 text-red-700 rounded-full text-sm font-semibold mb-6">
+            <AlertTriangle className="w-4 h-4" />
+            Problemas Críticos Identificados
           </div>
           
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-gray-900 mb-8 animate-slideUp leading-[0.9] tracking-tight">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 mb-6 leading-[1.1] tracking-tight">
             Desafios que{" "}
             <span className="relative inline-block">
-              <span className="text-transparent bg-gradient-to-r from-red-600 via-orange-500 to-red-500 bg-clip-text">
+              <span className="text-transparent bg-gradient-to-r from-red-600 to-orange-500 bg-clip-text">
                 Limitam
               </span>
-              <div className="absolute -bottom-3 left-0 right-0 h-2 bg-gradient-to-r from-red-600/30 via-orange-500/30 to-red-500/30 rounded-full blur-sm"></div>
-              <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-red-600 via-orange-500 to-red-500 rounded-full"></div>
+              <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-red-600 to-orange-500 rounded-full"></div>
             </span>
             <br />
             seu{" "}
@@ -98,140 +91,110 @@ const PainPoints = () => {
             </span>
           </h2>
           
-          <p className="text-xl sm:text-2xl lg:text-3xl text-gray-600 max-w-5xl mx-auto leading-relaxed animate-slideUp delay-200 font-light">
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">
             Identifique os obstáculos que impedem seu crescimento e descubra como nossa{" "}
-            <span className="font-bold text-transparent bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text">
+            <span className="font-semibold text-transparent bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text">
               IA revoluciona
             </span>{" "}
             cada processo
           </p>
           
-          {/* Enhanced Stats Preview */}
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-10 animate-slideUp delay-300">
-            <div className="bg-white/90 backdrop-blur-md rounded-2xl px-6 py-4 shadow-xl border border-gray-200/50 hover:shadow-2xl transition-all duration-300">
-              <div className="flex items-center gap-3">
-                <div className="p-2 bg-red-100 rounded-xl">
-                  <Target className="w-5 h-5 text-red-600" />
-                </div>
-                <div className="text-left">
-                  <p className="text-2xl font-bold text-red-600">78%</p>
-                  <p className="text-sm text-gray-600">das lojas enfrentam estes desafios</p>
-                </div>
+          {/* Stats compactos */}
+          <div className="flex justify-center items-center gap-8">
+            <div className="flex items-center gap-2 text-red-600">
+              <div className="p-1.5 bg-red-100 rounded-lg">
+                <Target className="w-4 h-4" />
+              </div>
+              <div>
+                <span className="text-2xl font-bold">78%</span>
+                <span className="text-sm text-gray-600 ml-1">das lojas enfrentam</span>
               </div>
             </div>
             
-            <div className="bg-white/90 backdrop-blur-md rounded-2xl px-6 py-4 shadow-xl border border-gray-200/50 hover:shadow-2xl transition-all duration-300">
-              <div className="flex items-center gap-3">
-                <div className="p-2 bg-green-100 rounded-xl">
-                  <Zap className="w-5 h-5 text-green-600" />
-                </div>
-                <div className="text-left">
-                  <p className="text-2xl font-bold text-green-600">+60%</p>
-                  <p className="text-sm text-gray-600">melhoria média com IA</p>
-                </div>
+            <div className="w-px h-8 bg-gray-300"></div>
+            
+            <div className="flex items-center gap-2 text-green-600">
+              <div className="p-1.5 bg-green-100 rounded-lg">
+                <Zap className="w-4 h-4" />
+              </div>
+              <div>
+                <span className="text-2xl font-bold">+60%</span>
+                <span className="text-sm text-gray-600 ml-1">melhoria com IA</span>
               </div>
             </div>
           </div>
         </div>
         
-        {/* Enhanced Pain Points Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
+        {/* Grid de problemas - Reorganizado */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {painPoints.map((point, index) => (
             <Card 
               key={index} 
-              className={`group relative overflow-hidden border-0 shadow-xl hover:shadow-2xl transition-all duration-700 hover:-translate-y-3 bg-gradient-to-br ${point.bgColor} backdrop-blur-sm animate-slideUp hover:scale-[1.02]`}
-              style={{ animationDelay: `${index * 150 + 500}ms` }}
+              className={`group relative overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2 bg-gradient-to-br ${point.bgColor} backdrop-blur-sm`}
             >
-              {/* Enhanced Gradient Border Effect */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${point.color} opacity-0 group-hover:opacity-100 transition-all duration-700 p-[3px] rounded-2xl`}>
-                <div className="bg-white/95 backdrop-blur-sm rounded-2xl h-full w-full"></div>
-              </div>
-              
-              {/* Category Tag */}
-              <div className="absolute top-6 right-6 z-20">
-                <div className="px-3 py-1.5 bg-white/90 backdrop-blur-sm text-gray-700 text-xs font-bold rounded-full shadow-lg border border-gray-200/50">
+              {/* Header com tags e métricas */}
+              <div className="flex justify-between items-start p-6 pb-4">
+                <div className="px-3 py-1 bg-white/80 backdrop-blur-sm text-gray-700 text-xs font-semibold rounded-full">
                   {point.tag}
                 </div>
-              </div>
-              
-              {/* Impact Badge */}
-              <div className="absolute top-6 left-6 z-20">
-                <div className="px-3 py-1.5 bg-red-500 text-white text-xs font-bold rounded-full shadow-lg group-hover:bg-red-600 transition-colors flex items-center gap-1">
+                <div className="px-3 py-1 bg-red-500 text-white text-xs font-semibold rounded-full flex items-center gap-1">
                   <AlertTriangle className="w-3 h-3" />
                   {point.impact}
                 </div>
               </div>
               
-              <CardContent className="p-8 sm:p-10 relative z-10 pt-20">
-                <div className="flex items-start space-x-6">
-                  {/* Enhanced Icon */}
-                  <div className="relative flex-shrink-0">
-                    <div className={`p-5 ${point.iconBg} rounded-3xl transition-all duration-500 shadow-lg group-hover:shadow-xl group-hover:scale-110`}>
-                      <point.icon className={`w-8 h-8 ${point.iconColor} transition-all duration-500`} />
-                    </div>
-                    
-                    {/* Multiple Pulse Effects */}
-                    <div className={`absolute inset-0 ${point.iconBg} rounded-3xl opacity-0 group-hover:opacity-20 group-hover:scale-150 transition-all duration-700`}></div>
-                    <div className={`absolute inset-0 ${point.iconBg} rounded-3xl opacity-0 group-hover:opacity-10 group-hover:scale-200 transition-all duration-1000 delay-200`}></div>
+              <CardContent className="px-6 pb-6">
+                <div className="flex items-start gap-4 mb-6">
+                  {/* Ícone */}
+                  <div className={`p-3 ${point.iconBg} rounded-2xl transition-all duration-300 flex-shrink-0`}>
+                    <point.icon className={`w-6 h-6 ${point.iconColor} transition-all duration-300`} />
                   </div>
                   
-                  <div className="flex-1 min-w-0">
-                    {/* Problem Title */}
-                    <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 group-hover:text-gray-800 transition-colors leading-tight">
+                  <div className="flex-1">
+                    {/* Título do problema */}
+                    <h3 className="text-xl font-bold text-gray-900 mb-3 leading-tight">
                       {point.problem}
                     </h3>
                     
-                    {/* Problem Description */}
-                    <p className="text-gray-600 mb-8 text-base sm:text-lg leading-relaxed">
+                    {/* Descrição */}
+                    <p className="text-gray-600 text-sm leading-relaxed">
                       {point.description}
                     </p>
-                    
-                    {/* Enhanced Solution Box */}
-                    <div className={`relative p-6 bg-gradient-to-br ${point.color} rounded-2xl shadow-xl group-hover:shadow-2xl transition-all duration-500 overflow-hidden`}>
-                      {/* Animated Background Pattern */}
-                      <div className="absolute inset-0 opacity-10">
-                        <div className="w-full h-full" style={{
-                          backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='white' fill-opacity='0.4'%3E%3Ccircle cx='20' cy='20' r='2'/%3E%3Ccircle cx='5' cy='5' r='1'/%3E%3Ccircle cx='35' cy='35' r='1'/%3E%3C/g%3E%3C/svg%3E")`,
-                          backgroundSize: '40px 40px'
-                        }}></div>
+                  </div>
+                </div>
+                
+                {/* Solução - Design mais limpo */}
+                <div className={`p-5 bg-gradient-to-br ${point.color} rounded-xl shadow-md relative overflow-hidden`}>
+                  <div className="relative z-10">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="p-1.5 bg-white/25 backdrop-blur-sm rounded-lg">
+                        <Zap className="w-4 h-4 text-white" />
                       </div>
-                      
-                      <div className="relative z-10">
-                        <div className="flex items-start gap-4 mb-5">
-                          <div className="p-2 bg-white/25 backdrop-blur-sm rounded-xl flex-shrink-0 group-hover:bg-white/35 transition-colors">
-                            <Zap className="w-5 h-5 text-white" />
-                          </div>
-                          <p className="text-white font-bold text-base sm:text-lg leading-tight">
-                            {point.solution}
-                          </p>
-                        </div>
-                        
-                        {/* Enhanced Metrics */}
-                        <div className="flex items-center justify-between">
-                          <div className="px-4 py-2 bg-white/25 backdrop-blur-sm rounded-2xl border border-white/20">
-                            <span className="text-white text-sm font-bold flex items-center gap-2">
-                              <Target className="w-4 h-4" />
-                              {point.metric}
-                            </span>
-                          </div>
-                          
-                          <div className="flex items-center text-white/90 group-hover:text-white transition-colors bg-white/10 px-4 py-2 rounded-2xl backdrop-blur-sm border border-white/20 hover:bg-white/20 cursor-pointer">
-                            <span className="text-sm font-bold mr-2">Ver Solução</span>
-                            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                          </div>
-                        </div>
-                      </div>
-                      
-                      {/* Glow Effect */}
-                      <div className="absolute inset-0 bg-white/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                      <span className="text-white font-semibold text-sm">Solução IA</span>
                     </div>
+                    
+                    <p className="text-white/95 text-sm mb-4 leading-relaxed">
+                      {point.solution}
+                    </p>
+                    
+                    <div className="flex items-center justify-between">
+                      <div className="px-3 py-1.5 bg-white/20 backdrop-blur-sm rounded-lg border border-white/20">
+                        <span className="text-white text-sm font-semibold">
+                          {point.metric}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Background pattern sutil */}
+                  <div className="absolute inset-0 opacity-10">
+                    <div className="w-full h-full" style={{
+                      backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='white' fill-opacity='0.3'%3E%3Ccircle cx='20' cy='20' r='1.5'/%3E%3C/g%3E%3C/svg%3E")`,
+                      backgroundSize: '40px 40px'
+                    }}></div>
                   </div>
                 </div>
               </CardContent>
-              
-              {/* Enhanced Decorative Elements */}
-              <div className={`absolute -bottom-8 -right-8 w-32 h-32 bg-gradient-to-br ${point.color} rounded-full opacity-0 group-hover:opacity-10 transition-all duration-700 blur-2xl`}></div>
-              <div className={`absolute -top-8 -left-8 w-24 h-24 bg-gradient-to-br ${point.color} rounded-full opacity-0 group-hover:opacity-5 transition-all duration-1000 blur-2xl`}></div>
             </Card>
           ))}
         </div>
