@@ -94,6 +94,14 @@
   body {
     @apply bg-background text-foreground;
     scroll-behavior: smooth;
+    /* Prevent horizontal scroll on mobile */
+    overflow-x: hidden;
+  }
+
+  /* Ensure all containers don't overflow */
+  .container {
+    max-width: 100%;
+    overflow-x: hidden;
   }
 }
 
@@ -131,6 +139,17 @@
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  /* Mobile-specific utilities */
+  .touch-manipulation {
+    touch-action: manipulation;
+  }
+
+  /* Better tap targets for mobile */
+  .tap-target {
+    min-height: 44px;
+    min-width: 44px;
   }
 }
 
@@ -193,4 +212,43 @@ a:focus-visible {
   100% {
     left: 100%;
   }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  /* Improve tap targets */
+  button, a, [role="button"] {
+    min-height: 44px;
+    touch-action: manipulation;
+  }
+  
+  /* Better text readability */
+  p, span, div {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Prevent zoom on form inputs */
+  input, select, textarea {
+    font-size: 16px;
+  }
+}
+
+/* Tablet optimizations */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Optimize spacing for tablet */
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Prevent horizontal scroll */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
 }
