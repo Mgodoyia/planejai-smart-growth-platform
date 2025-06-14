@@ -102,8 +102,8 @@ const PainPoints = () => {
             cada processo com tecnologia de ponta
           </p>
           
-          {/* Enhanced stats with branding colors */}
-          <div className="flex justify-center items-center gap-12">
+          {/* Enhanced stats with branding colors - showing only 78% */}
+          <div className="flex justify-center items-center">
             <div className="flex items-center gap-3 text-red-600">
               <div className="p-2 bg-gradient-to-br from-red-100 to-red-50 rounded-xl shadow-md border border-red-200/50">
                 <Target className="w-5 h-5" />
@@ -111,18 +111,6 @@ const PainPoints = () => {
               <div>
                 <span className="text-3xl font-bold bg-gradient-to-r from-red-600 to-red-700 bg-clip-text text-transparent">78%</span>
                 <span className="text-sm text-gray-600 ml-2 font-medium">das lojas enfrentam</span>
-              </div>
-            </div>
-            
-            <div className="w-px h-12 bg-gradient-to-b from-transparent via-gray-300 to-transparent"></div>
-            
-            <div className="flex items-center gap-3 text-green-600">
-              <div className="p-2 bg-gradient-to-br from-green-100 to-green-50 rounded-xl shadow-md border border-green-200/50">
-                <Zap className="w-5 h-5" />
-              </div>
-              <div>
-                <span className="text-3xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">+60%</span>
-                <span className="text-sm text-gray-600 ml-2 font-medium">melhoria com IA</span>
               </div>
             </div>
           </div>
