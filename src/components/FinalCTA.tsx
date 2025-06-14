@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { Calendar, Download } from "lucide-react";
+import { Calendar, BookOpen } from "lucide-react";
 
 const FinalCTA = () => {
   return (
@@ -8,7 +8,7 @@ const FinalCTA = () => {
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-30">
         <div className="w-full h-full" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23FFFFFF' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+          backgroundImage: `url("data:image/svg+xml,%3Csvv width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23FFFFFF' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
         }}></div>
       </div>
       
@@ -31,8 +31,8 @@ const FinalCTA = () => {
               Agendar Sessão de Estudo
             </Button>
             <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/10 px-10 py-4 text-lg rounded-lg backdrop-blur-sm">
-              <Download className="mr-2 w-5 h-5" />
-              Baixar E-book Gratuito
+              <BookOpen className="mr-2 w-5 h-5" />
+              Aprender Tudo Sobre IA
             </Button>
           </div>
           

@@ -25,7 +25,7 @@ const Hero = () => {
       {/* Header */}
       <header className="container mx-auto px-6 pt-8 relative z-10">
         <nav className="flex items-center justify-between">
-          <Logo className="scale-110" />
+          <Logo className="scale-125" />
           <div className="flex items-center space-x-4">
             <Button className="bg-blue-600 hover:bg-blue-700">
               Sessão de Estudo
@@ -60,7 +60,7 @@ const Hero = () => {
             
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <Button variant="outline" size="lg" className="border-blue-300 text-blue-100 hover:bg-blue-800/30 px-8 py-4 text-lg rounded-lg backdrop-blur-sm" onClick={scrollToFinalCTA}>
+              <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 text-lg rounded-lg backdrop-blur-sm transition-all duration-300" onClick={scrollToFinalCTA}>
                 <Play className="mr-2 w-5 h-5" />
                 Ver Demonstração
               </Button>
@@ -72,7 +72,7 @@ const Hero = () => {
               <div className="flex flex-wrap gap-6 opacity-60">
                 <span className="font-semibold">✓ Implementação em 30 dias</span>
                 <span className="font-semibold">✓ 90 dias de acompanhamento semanal</span>
-                <span className="font-semibold">✓ Suporte 24/7</span>
+                <span className="font-semibold">✓ Suporte especializado</span>
               </div>
             </div>
           </div>
