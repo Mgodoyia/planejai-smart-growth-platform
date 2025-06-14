@@ -53,13 +53,13 @@ const Footer = () => {
           </div>
           
           {/* Links */}
-          <div className="text-center md:text-left">
-            <h4 className="text-base sm:text-lg font-semibold mb-4">Navegação</h4>
-            <ul className="space-y-2 text-gray-400 text-sm sm:text-base">
+          <div className="text-center md:text-left px-4 sm:px-0">
+            <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Navegação</h4>
+            <ul className="space-y-1.5 sm:space-y-2 text-gray-400 text-sm sm:text-base">
               <li>
                 <button 
                   onClick={() => scrollToSection('features')} 
-                  className="hover:text-white transition-colors text-left w-full"
+                  className="hover:text-white transition-colors text-left w-full py-1"
                 >
                   Funcionalidades
                 </button>
@@ -67,7 +67,7 @@ const Footer = () => {
               <li>
                 <button 
                   onClick={() => scrollToSection('benefits')} 
-                  className="hover:text-white transition-colors text-left w-full"
+                  className="hover:text-white transition-colors text-left w-full py-1"
                 >
                   Benefícios
                 </button>
@@ -75,7 +75,7 @@ const Footer = () => {
               <li>
                 <button 
                   onClick={() => scrollToSection('testimonials')} 
-                  className="hover:text-white transition-colors text-left w-full"
+                  className="hover:text-white transition-colors text-left w-full py-1"
                 >
                   Depoimentos
                 </button>
@@ -83,7 +83,7 @@ const Footer = () => {
               <li>
                 <button 
                   onClick={() => scrollToSection('tech-stack')} 
-                  className="hover:text-white transition-colors text-left w-full"
+                  className="hover:text-white transition-colors text-left w-full py-1"
                 >
                   Tecnologia
                 </button>
@@ -91,26 +91,26 @@ const Footer = () => {
             </ul>
           </div>
           
-          <div className="text-center md:text-left">
-            <h4 className="text-base sm:text-lg font-semibold mb-4">Contato</h4>
-            <ul className="space-y-2 text-gray-400 text-sm sm:text-base">
-              <li><a href="#" className="hover:text-white transition-colors">Sobre</a></li>
+          <div className="text-center md:text-left px-4 sm:px-0">
+            <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Contato</h4>
+            <ul className="space-y-1.5 sm:space-y-2 text-gray-400 text-sm sm:text-base">
+              <li><a href="#" className="hover:text-white transition-colors block py-1">Sobre</a></li>
               <li><a 
                 href="https://instagram.com/planej.aitec" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="hover:text-white transition-colors"
+                className="hover:text-white transition-colors block py-1"
               >Instagram</a></li>
               <li><a 
                 href="https://www.youtube.com/@PlanejAiautomações" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="hover:text-white transition-colors"
+                className="hover:text-white transition-colors block py-1"
               >YouTube</a></li>
               <li>
                 <button 
                   onClick={() => scrollToSection('testimonials')} 
-                  className="hover:text-white transition-colors text-left w-full"
+                  className="hover:text-white transition-colors text-left w-full py-1"
                 >
                   Casos de Sucesso
                 </button>
@@ -119,13 +119,13 @@ const Footer = () => {
                 href="https://wa.me/5548996495426" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="hover:text-white transition-colors"
+                className="hover:text-white transition-colors block py-1"
               >Contato</a></li>
             </ul>
           </div>
         </div>
         
-        <div className="border-t border-gray-800 mt-8 sm:mt-12 pt-6 sm:pt-8 text-center text-gray-400 text-xs sm:text-sm">
+        <div className="border-t border-gray-800 mt-8 sm:mt-12 pt-6 sm:pt-8 text-center text-gray-400 text-xs sm:text-sm px-4">
           <p>&copy; 2025 Planej.AI. Todos os direitos reservados. | Política de Privacidade | Termos de Uso</p>
         </div>
       </div>
