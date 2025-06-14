@@ -9,8 +9,8 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="md:col-span-2">
-            <Logo className="mb-6 scale-300 transform hover:scale-[3.1] transition-transform duration-300" />
-            <p className="text-gray-400 mb-6 max-w-md">
+            <Logo className="mb-6 scale-[4] transform-gpu" />
+            <p className="text-gray-400 mb-6 max-w-md mt-12">
               A plataforma de inteligência artificial que revoluciona a gestão de lojas de móveis planejados no Brasil.
             </p>
             <div className="flex space-x-4">
