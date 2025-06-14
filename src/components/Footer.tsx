@@ -1,5 +1,4 @@
 
-
 import { Instagram } from "lucide-react";
 import Logo from "./Logo";
 
@@ -10,7 +9,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="md:col-span-2">
-            <Logo className="mb-4 scale-200" />
+            <Logo className="mb-6 scale-300 transform hover:scale-[3.1] transition-transform duration-300" />
             <p className="text-gray-400 mb-6 max-w-md">
               A plataforma de inteligência artificial que revoluciona a gestão de lojas de móveis planejados no Brasil.
             </p>
@@ -38,17 +37,17 @@ const Footer = () => {
           
           {/* Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Produto</h4>
+            <h4 className="text-lg font-semibold mb-4">Navegação</h4>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="#" className="hover:text-white transition-colors">Funcionalidades</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Integrações</a></li>
-              <li><a href="#features" className="hover:text-white transition-colors">Características</a></li>
+              <li><a href="#features" className="hover:text-white transition-colors">Funcionalidades</a></li>
               <li><a href="#benefits" className="hover:text-white transition-colors">Benefícios</a></li>
+              <li><a href="#testimonials" className="hover:text-white transition-colors">Depoimentos</a></li>
+              <li><a href="#tech-stack" className="hover:text-white transition-colors">Tecnologia</a></li>
             </ul>
           </div>
           
           <div>
-            <h4 className="text-lg font-semibold mb-4">Empresa</h4>
+            <h4 className="text-lg font-semibold mb-4">Contato</h4>
             <ul className="space-y-2 text-gray-400">
               <li><a href="#" className="hover:text-white transition-colors">Sobre</a></li>
               <li><a 
@@ -77,4 +76,3 @@ const Footer = () => {
 };
 
 export default Footer;
-

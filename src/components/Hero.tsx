@@ -59,7 +59,7 @@ const Hero = () => {
             {/* Enhanced Main Headline */}
             <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-indigo-200 bg-clip-text text-transparent leading-tight animate-fadeIn">
               Gestão <span className="relative">
-                Inteligente
+                Completa
                 <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"></div>
               </span>
             </h1>
