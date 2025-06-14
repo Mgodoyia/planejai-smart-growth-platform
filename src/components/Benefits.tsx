@@ -1,3 +1,4 @@
+
 import { TrendingUp, Clock, DollarSign, Truck, Heart, Zap } from "lucide-react";
 
 const Benefits = () => {
@@ -41,30 +42,30 @@ const Benefits = () => {
   ];
 
   return (
-    <section id="benefits" className="py-20 bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">
+    <section id="benefits" className="py-16 sm:py-20 bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
             Resultados Comprovados
           </h2>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto px-4">
             Métricas reais de empresas que já transformaram seus negócios com a Planej.AI
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {benefits.map((benefit, index) => (
             <div key={index} className="text-center group">
-              <div className="mb-6 mx-auto w-20 h-20 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center group-hover:bg-white/20 transition-all duration-300 group-hover:scale-110">
-                <benefit.icon className="w-10 h-10 text-blue-300" />
+              <div className="mb-4 sm:mb-6 mx-auto w-16 h-16 sm:w-20 sm:h-20 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center group-hover:bg-white/20 transition-all duration-300 group-hover:scale-110">
+                <benefit.icon className="w-8 h-8 sm:w-10 sm:h-10 text-blue-300" />
               </div>
-              <div className="text-5xl font-bold text-transparent bg-gradient-to-r from-blue-300 to-purple-300 bg-clip-text mb-2">
+              <div className="text-4xl sm:text-5xl font-bold text-transparent bg-gradient-to-r from-blue-300 to-purple-300 bg-clip-text mb-2">
                 {benefit.metric}
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">
+              <h3 className="text-lg sm:text-xl font-semibold text-white mb-2 sm:mb-3">
                 {benefit.title}
               </h3>
-              <p className="text-blue-100 leading-relaxed">
+              <p className="text-sm sm:text-base text-blue-100 leading-relaxed px-2">
                 {benefit.description}
               </p>
             </div>
