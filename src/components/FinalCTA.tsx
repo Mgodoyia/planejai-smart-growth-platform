@@ -1,6 +1,6 @@
-
 import { Button } from "@/components/ui/button";
 import { Calendar, BookOpen, ArrowRight, Sparkles, CheckCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const FinalCTA = () => {
   const openWhatsApp = () => {
@@ -56,15 +56,17 @@ const FinalCTA = () => {
               <ArrowRight className="ml-2 sm:ml-3 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             
-            <Button 
-              variant="outline" 
-              size="lg" 
-              className="border-2 border-white/30 bg-white/10 text-white hover:bg-white/20 px-8 sm:px-12 py-4 sm:py-6 text-lg sm:text-xl rounded-2xl backdrop-blur-sm transition-all duration-300 hover:scale-105 group w-full sm:w-auto"
-            >
-              <BookOpen className="mr-2 sm:mr-3 w-5 h-5 sm:w-6 sm:h-6 group-hover:scale-110 transition-transform" />
-              <span className="hidden sm:inline">Aprender Tudo Sobre IA</span>
-              <span className="sm:hidden">Aprender Sobre IA</span>
-            </Button>
+            <Link to="/ebook-ia">
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="border-2 border-white/30 bg-white/10 text-white hover:bg-white/20 px-8 sm:px-12 py-4 sm:py-6 text-lg sm:text-xl rounded-2xl backdrop-blur-sm transition-all duration-300 hover:scale-105 group w-full sm:w-auto"
+              >
+                <BookOpen className="mr-2 sm:mr-3 w-5 h-5 sm:w-6 sm:h-6 group-hover:scale-110 transition-transform" />
+                <span className="hidden sm:inline">Aprender Tudo Sobre IA</span>
+                <span className="sm:hidden">Aprender Sobre IA</span>
+              </Button>
+            </Link>
           </div>
           
           {/* Enhanced Statistics - Cards com mesmo tamanho */}
