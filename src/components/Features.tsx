@@ -6,7 +6,6 @@ import {
   BarChart3, 
   Bell, 
   Cog,
-  ArrowRight,
   Sparkles
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -130,15 +129,9 @@ const Features = () => {
                 </CardHeader>
                 
                 <CardContent className="px-5 sm:px-6 lg:px-7 pb-6">
-                  <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-4">
+                  <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
                     {feature.description}
                   </p>
-                  
-                  {/* Call to Action */}
-                  <div className="flex items-center text-blue-600 font-medium text-sm group-hover:text-purple-600 transition-colors duration-300">
-                    <span>Saiba mais</span>
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                  </div>
                 </CardContent>
               </div>
               
@@ -147,14 +140,6 @@ const Features = () => {
               <div className="absolute -top-2 -left-2 w-16 h-16 bg-gradient-to-br from-purple-100 to-pink-100 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
             </Card>
           ))}
-        </div>
-        
-        {/* Bottom CTA Section */}
-        <div className="text-center mt-12 sm:mt-16 lg:mt-20">
-          <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer">
-            <span>Explore todas as funcionalidades</span>
-            <ArrowRight className="w-5 h-5" />
-          </div>
         </div>
       </div>
     </section>
