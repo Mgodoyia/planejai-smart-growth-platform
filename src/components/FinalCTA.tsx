@@ -65,22 +65,22 @@ const FinalCTA = () => {
             </Button>
           </div>
           
-          {/* Enhanced Statistics */}
+          {/* Enhanced Statistics - Cards com mesmo tamanho */}
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {[
               { number: "30 dias", label: "Implementação completa", icon: CheckCircle },
               { number: "90 dias", label: "Acompanhamento semanal", icon: Calendar },
               { number: "Suporte Premium", label: "Atendimento especializado", icon: Sparkles }
             ].map((stat, index) => (
-              <div key={index} className="group">
-                <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-8 hover:bg-white/15 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+              <div key={index} className="group h-full">
+                <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-8 hover:bg-white/15 transition-all duration-300 hover:scale-105 hover:shadow-2xl h-full flex flex-col justify-center items-center min-h-[200px]">
                   <div className="mb-4">
                     <stat.icon className="w-8 h-8 text-blue-300 mx-auto group-hover:scale-110 transition-transform" />
                   </div>
-                  <div className="text-4xl font-bold text-transparent bg-gradient-to-r from-blue-200 to-purple-200 bg-clip-text mb-3">
+                  <div className="text-3xl md:text-4xl font-bold text-transparent bg-gradient-to-r from-blue-200 to-purple-200 bg-clip-text mb-3 text-center">
                     {stat.number}
                   </div>
-                  <div className="text-blue-200 font-medium text-lg">{stat.label}</div>
+                  <div className="text-blue-200 font-medium text-lg text-center">{stat.label}</div>
                 </div>
               </div>
             ))}
