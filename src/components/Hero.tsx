@@ -25,7 +25,7 @@ const Hero = () => {
       {/* Header */}
       <header className="container mx-auto px-6 pt-8 relative z-10">
         <nav className="flex items-center justify-between">
-          <Logo className="scale-125" />
+          <Logo className="scale-150" />
           <div className="flex items-center space-x-4">
             <Button className="bg-blue-600 hover:bg-blue-700">
               Sessão de Estudo
@@ -36,7 +36,7 @@ const Hero = () => {
       
       <div className="container mx-auto px-6 pt-16 pb-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="lg:pr-8">
+          <div className="lg:pr-12">
             {/* Badge */}
             <Badge className="mb-8 bg-blue-500/20 text-blue-300 border-blue-400/30 hover:bg-blue-500/30 transition-colors">
               <div className="w-4 h-4 mr-2 bg-gradient-to-br from-blue-500 to-purple-500 rounded"></div>
@@ -60,7 +60,7 @@ const Hero = () => {
             
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 text-lg rounded-lg backdrop-blur-sm transition-all duration-300" onClick={scrollToFinalCTA}>
+              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 px-8 py-4 text-lg rounded-lg shadow-lg hover:shadow-xl transition-all duration-300" onClick={scrollToFinalCTA}>
                 <Play className="mr-2 w-5 h-5" />
                 Ver Demonstração
               </Button>
