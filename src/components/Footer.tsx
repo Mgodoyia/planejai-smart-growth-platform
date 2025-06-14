@@ -1,4 +1,5 @@
 
+
 import { Instagram } from "lucide-react";
 import Logo from "./Logo";
 
@@ -15,7 +16,7 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a 
-                href="https://wa.me/5511999999999" 
+                href="https://wa.me/5548996495426" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-green-500 transition-colors"
@@ -25,7 +26,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a 
-                href="https://instagram.com/planej.ai" 
+                href="https://instagram.com/planej.aitec" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-pink-500 transition-colors"
@@ -66,3 +67,4 @@ const Footer = () => {
 };
 
 export default Footer;
+
