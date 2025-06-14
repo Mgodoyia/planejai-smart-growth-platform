@@ -1,11 +1,18 @@
 
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Sparkles, Play } from "lucide-react";
+import { Play } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import Logo from "./Logo";
 
 const Hero = () => {
+  const scrollToFinalCTA = () => {
+    const finalCTA = document.getElementById('final-cta');
+    if (finalCTA) {
+      finalCTA.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white overflow-hidden">
       {/* Background Pattern */}
@@ -20,11 +27,8 @@ const Hero = () => {
         <nav className="flex items-center justify-between">
           <Logo />
           <div className="flex items-center space-x-4">
-            <Button variant="outline" className="border-blue-300 text-blue-100 hover:bg-blue-800/30 backdrop-blur-sm">
-              Login
-            </Button>
             <Button className="bg-blue-600 hover:bg-blue-700">
-              Demo Gratuita
+              Sessão de Estudo
             </Button>
           </div>
         </nav>
@@ -35,7 +39,7 @@ const Hero = () => {
           <div>
             {/* Badge */}
             <Badge className="mb-8 bg-blue-500/20 text-blue-300 border-blue-400/30 hover:bg-blue-500/30 transition-colors">
-              <Sparkles className="w-4 h-4 mr-2" />
+              <div className="w-4 h-4 mr-2 bg-gradient-to-br from-blue-500 to-purple-500 rounded"></div>
               Inteligência Artificial para Móveis Planejados
             </Badge>
             
@@ -51,11 +55,7 @@ const Hero = () => {
             
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
-                Solicitar Demo Gratuita
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-              <Button variant="outline" size="lg" className="border-blue-300 text-blue-100 hover:bg-blue-800/30 px-8 py-4 text-lg rounded-lg backdrop-blur-sm">
+              <Button variant="outline" size="lg" className="border-blue-300 text-blue-100 hover:bg-blue-800/30 px-8 py-4 text-lg rounded-lg backdrop-blur-sm" onClick={scrollToFinalCTA}>
                 <Play className="mr-2 w-5 h-5" />
                 Ver Demonstração
               </Button>
@@ -63,10 +63,10 @@ const Hero = () => {
             
             {/* Trust Indicators */}
             <div className="text-blue-200 text-sm">
-              <p className="mb-4">Já transformou mais de 500+ lojas no Brasil</p>
+              <p className="mb-4">Revolucionando a gestão de móveis planejados no Brasil</p>
               <div className="flex flex-wrap gap-6 opacity-60">
-                <span className="font-semibold">✓ Sem fidelidade</span>
-                <span className="font-semibold">✓ Implementação em 7 dias</span>
+                <span className="font-semibold">✓ Implementação em 30 dias</span>
+                <span className="font-semibold">✓ 90 dias de acompanhamento semanal</span>
                 <span className="font-semibold">✓ Suporte 24/7</span>
               </div>
             </div>
@@ -91,11 +91,6 @@ const Hero = () => {
                 />
               </CardContent>
             </Card>
-            
-            {/* Floating elements */}
-            <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center animate-pulse">
-              <Sparkles className="w-8 h-8 text-white" />
-            </div>
           </div>
         </div>
       </div>

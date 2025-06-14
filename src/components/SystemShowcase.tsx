@@ -56,7 +56,7 @@ const SystemShowcase = () => {
           <Card className="shadow-2xl border-0 overflow-hidden order-2 lg:order-1">
             <CardContent className="p-0">
               <img 
-                src="/lovable-uploads/309cfa6e-dd96-426b-9064-cf6fad478b10.png" 
+                src="/lovable-uploads/e2647de0-b10b-403d-a9d3-524879231d16.png" 
                 alt="Kanban Planej.AI - Gestão visual de projetos"
                 className="w-full h-auto"
               />
