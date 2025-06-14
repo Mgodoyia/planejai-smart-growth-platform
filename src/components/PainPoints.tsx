@@ -67,77 +67,80 @@ const PainPoints = () => {
           backgroundSize: '60px 60px'
         }}></div>
       </div>
+
+      {/* Gradient orbs for enhanced branding */}
+      <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-br from-blue-400/20 to-purple-500/20 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-br from-red-400/20 to-orange-500/20 rounded-full blur-3xl"></div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative">
-        {/* Header Section - Mais compacto e eficiente */}
+        {/* Header Section */}
         <div className="text-center mb-16 lg:mb-20">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-red-100 to-orange-100 border border-red-200/50 text-red-700 rounded-full text-sm font-semibold mb-6">
+          <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-red-100 via-orange-50 to-red-100 border border-red-200/60 text-red-700 rounded-full text-sm font-semibold mb-8 shadow-lg shadow-red-100/50">
             <AlertTriangle className="w-4 h-4" />
             Problemas Críticos Identificados
           </div>
           
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 mb-6 leading-[1.1] tracking-tight">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 mb-8 leading-[1.1] tracking-tight">
             Desafios que{" "}
-            <span className="relative inline-block">
-              <span className="text-transparent bg-gradient-to-r from-red-600 to-orange-500 bg-clip-text">
-                Limitam
-              </span>
-              <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-red-600 to-orange-500 rounded-full"></div>
-            </span>
-            <br />
+            <span className="text-gray-900">
+              Limitam
+            </span>{" "}
             seu{" "}
-            <span className="text-transparent bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text">
-              Potencial
+            <span className="relative inline-block">
+              <span className="text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text">
+                Potencial
+              </span>
+              <div className="absolute -bottom-2 left-0 right-0 h-1.5 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 rounded-full shadow-lg"></div>
             </span>
           </h2>
           
-          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">
+          <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-10">
             Identifique os obstáculos que impedem seu crescimento e descubra como nossa{" "}
-            <span className="font-semibold text-transparent bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text">
+            <span className="font-semibold text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text">
               IA revoluciona
             </span>{" "}
-            cada processo
+            cada processo com tecnologia de ponta
           </p>
           
-          {/* Stats compactos */}
-          <div className="flex justify-center items-center gap-8">
-            <div className="flex items-center gap-2 text-red-600">
-              <div className="p-1.5 bg-red-100 rounded-lg">
-                <Target className="w-4 h-4" />
+          {/* Enhanced stats with branding colors */}
+          <div className="flex justify-center items-center gap-12">
+            <div className="flex items-center gap-3 text-red-600">
+              <div className="p-2 bg-gradient-to-br from-red-100 to-red-50 rounded-xl shadow-md border border-red-200/50">
+                <Target className="w-5 h-5" />
               </div>
               <div>
-                <span className="text-2xl font-bold">78%</span>
-                <span className="text-sm text-gray-600 ml-1">das lojas enfrentam</span>
+                <span className="text-3xl font-bold bg-gradient-to-r from-red-600 to-red-700 bg-clip-text text-transparent">78%</span>
+                <span className="text-sm text-gray-600 ml-2 font-medium">das lojas enfrentam</span>
               </div>
             </div>
             
-            <div className="w-px h-8 bg-gray-300"></div>
+            <div className="w-px h-12 bg-gradient-to-b from-transparent via-gray-300 to-transparent"></div>
             
-            <div className="flex items-center gap-2 text-green-600">
-              <div className="p-1.5 bg-green-100 rounded-lg">
-                <Zap className="w-4 h-4" />
+            <div className="flex items-center gap-3 text-green-600">
+              <div className="p-2 bg-gradient-to-br from-green-100 to-green-50 rounded-xl shadow-md border border-green-200/50">
+                <Zap className="w-5 h-5" />
               </div>
               <div>
-                <span className="text-2xl font-bold">+60%</span>
-                <span className="text-sm text-gray-600 ml-1">melhoria com IA</span>
+                <span className="text-3xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">+60%</span>
+                <span className="text-sm text-gray-600 ml-2 font-medium">melhoria com IA</span>
               </div>
             </div>
           </div>
         </div>
         
-        {/* Grid de problemas - Reorganizado */}
+        {/* Grid de problemas - Enhanced with branding */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {painPoints.map((point, index) => (
             <Card 
               key={index} 
-              className={`group relative overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2 bg-gradient-to-br ${point.bgColor} backdrop-blur-sm`}
+              className={`group relative overflow-hidden border-0 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 bg-gradient-to-br ${point.bgColor} backdrop-blur-sm ring-1 ring-white/20`}
             >
-              {/* Header com tags e métricas */}
+              {/* Enhanced header with gradient effects */}
               <div className="flex justify-between items-start p-6 pb-4">
-                <div className="px-3 py-1 bg-white/80 backdrop-blur-sm text-gray-700 text-xs font-semibold rounded-full">
+                <div className="px-4 py-1.5 bg-white/90 backdrop-blur-sm text-gray-700 text-xs font-bold rounded-full shadow-sm border border-gray-200/50">
                   {point.tag}
                 </div>
-                <div className="px-3 py-1 bg-red-500 text-white text-xs font-semibold rounded-full flex items-center gap-1">
+                <div className="px-4 py-1.5 bg-gradient-to-r from-red-500 to-red-600 text-white text-xs font-bold rounded-full flex items-center gap-1.5 shadow-lg">
                   <AlertTriangle className="w-3 h-3" />
                   {point.impact}
                 </div>
@@ -145,54 +148,55 @@ const PainPoints = () => {
               
               <CardContent className="px-6 pb-6">
                 <div className="flex items-start gap-4 mb-6">
-                  {/* Ícone */}
-                  <div className={`p-3 ${point.iconBg} rounded-2xl transition-all duration-300 flex-shrink-0`}>
+                  {/* Enhanced icon with gradient background */}
+                  <div className={`p-3.5 ${point.iconBg} rounded-2xl transition-all duration-300 flex-shrink-0 shadow-md ring-1 ring-white/30`}>
                     <point.icon className={`w-6 h-6 ${point.iconColor} transition-all duration-300`} />
                   </div>
                   
                   <div className="flex-1">
-                    {/* Título do problema */}
                     <h3 className="text-xl font-bold text-gray-900 mb-3 leading-tight">
                       {point.problem}
                     </h3>
                     
-                    {/* Descrição */}
                     <p className="text-gray-600 text-sm leading-relaxed">
                       {point.description}
                     </p>
                   </div>
                 </div>
                 
-                {/* Solução - Design mais limpo */}
-                <div className={`p-5 bg-gradient-to-br ${point.color} rounded-xl shadow-md relative overflow-hidden`}>
+                {/* Enhanced solution card with branding */}
+                <div className={`p-6 bg-gradient-to-br ${point.color} rounded-xl shadow-xl relative overflow-hidden ring-1 ring-white/20`}>
                   <div className="relative z-10">
                     <div className="flex items-center gap-3 mb-4">
-                      <div className="p-1.5 bg-white/25 backdrop-blur-sm rounded-lg">
-                        <Zap className="w-4 h-4 text-white" />
+                      <div className="p-2 bg-white/30 backdrop-blur-sm rounded-xl border border-white/20 shadow-md">
+                        <Zap className="w-5 h-5 text-white" />
                       </div>
-                      <span className="text-white font-semibold text-sm">Solução IA</span>
+                      <span className="text-white font-bold text-sm tracking-wide">Solução com IA</span>
                     </div>
                     
-                    <p className="text-white/95 text-sm mb-4 leading-relaxed">
+                    <p className="text-white/95 text-sm mb-5 leading-relaxed font-medium">
                       {point.solution}
                     </p>
                     
                     <div className="flex items-center justify-between">
-                      <div className="px-3 py-1.5 bg-white/20 backdrop-blur-sm rounded-lg border border-white/20">
-                        <span className="text-white text-sm font-semibold">
+                      <div className="px-4 py-2 bg-white/25 backdrop-blur-sm rounded-xl border border-white/20 shadow-lg">
+                        <span className="text-white text-sm font-bold">
                           {point.metric}
                         </span>
                       </div>
                     </div>
                   </div>
                   
-                  {/* Background pattern sutil */}
+                  {/* Enhanced background pattern */}
                   <div className="absolute inset-0 opacity-10">
                     <div className="w-full h-full" style={{
-                      backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='white' fill-opacity='0.3'%3E%3Ccircle cx='20' cy='20' r='1.5'/%3E%3C/g%3E%3C/svg%3E")`,
+                      backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='white' fill-opacity='0.4'%3E%3Ccircle cx='20' cy='20' r='1.5'/%3E%3C/g%3E%3C/svg%3E")`,
                       backgroundSize: '40px 40px'
                     }}></div>
                   </div>
+                  
+                  {/* Gradient overlay for depth */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
                 </div>
               </CardContent>
             </Card>
