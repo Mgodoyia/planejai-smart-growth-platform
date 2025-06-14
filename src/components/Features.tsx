@@ -1,3 +1,4 @@
+
 import { 
   MessageSquare, 
   Calendar, 
@@ -32,7 +33,7 @@ const Features = () => {
       icon: Cog,
       title: "Kanban Visual de Projetos",
       description: "Acompanhe todos os projetos em tempo real com interface visual intuitiva",
-      image: "/lovable-uploads/309cfa6e-dd96-426b-9064-cf6fad478b10.png"
+      image: "/lovable-uploads/e2647de0-b10b-403d-a9d3-524879231d16.png"
     },
     {
       icon: BarChart3,
