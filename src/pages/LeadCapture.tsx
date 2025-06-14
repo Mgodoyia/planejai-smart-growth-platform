@@ -50,7 +50,7 @@ const LeadCapture = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 py-4 px-4 overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 flex items-center justify-center p-4 overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/30 via-indigo-600/30 to-purple-600/30"></div>
@@ -59,126 +59,39 @@ const LeadCapture = () => {
         }}></div>
       </div>
 
-      <div className="container mx-auto max-w-2xl relative z-10 h-screen flex flex-col">
-        {/* Header */}
-        <div className="text-center mb-6">
-          <Link to="/" className="inline-flex items-center text-blue-300 hover:text-blue-200 mb-4 transition-colors">
+      <div className="container mx-auto max-w-4xl relative z-10 w-full">
+        {/* Back Button */}
+        <div className="absolute top-0 left-0">
+          <Link to="/" className="inline-flex items-center text-blue-300 hover:text-blue-200 transition-colors">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Voltar ao início
           </Link>
-          
-          <div className="inline-flex items-center bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-sm border border-blue-400/30 rounded-full px-4 py-1 mb-4">
-            <Sparkles className="w-3 h-3 mr-2 text-blue-300" />
-            <span className="text-blue-200 font-medium text-sm">Conteúdo Exclusivo</span>
-          </div>
-          
-          <h1 className="text-3xl md:text-4xl font-bold mb-3 bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent">
-            Ebook Gratuito
-          </h1>
-          <p className="text-lg text-blue-100 mb-1">
-            Como a IA pode Revolucionar sua Loja de Móveis Planejados
-          </p>
-          <p className="text-blue-200 text-sm">
-            Preencha os dados abaixo para receber seu ebook exclusivo
-          </p>
         </div>
 
-        {/* Form Card */}
-        <Card className="bg-white/10 backdrop-blur-xl border border-white/20 shadow-2xl flex-1 flex flex-col">
-          <CardHeader className="text-center pb-4">
-            <div className="mx-auto w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mb-3">
-              <BookOpen className="w-6 h-6 text-white" />
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center min-h-[80vh]">
+          {/* Left Column - Header Info */}
+          <div className="text-center lg:text-left space-y-6">
+            <div className="inline-flex items-center bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-sm border border-blue-400/30 rounded-full px-4 py-2">
+              <Sparkles className="w-4 h-4 mr-2 text-blue-300" />
+              <span className="text-blue-200 font-medium">Conteúdo Exclusivo</span>
             </div>
-            <CardTitle className="text-xl text-white">Baixe seu Ebook Gratuito</CardTitle>
-            <CardDescription className="text-blue-200 text-sm">
-              Descubra estratégias práticas para implementar IA em sua loja
-            </CardDescription>
-          </CardHeader>
-          
-          <CardContent className="flex-1 flex flex-col">
-            <form onSubmit={handleSubmit} className="space-y-4 flex-1">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                <div className="space-y-1">
-                  <Label htmlFor="fullName" className="text-white text-sm">Nome Completo *</Label>
-                  <Input
-                    id="fullName"
-                    name="fullName"
-                    type="text"
-                    placeholder="Seu nome completo"
-                    value={formData.fullName}
-                    onChange={handleInputChange}
-                    required
-                    className="bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:border-blue-400 h-10"
-                  />
-                </div>
-                
-                <div className="space-y-1">
-                  <Label htmlFor="companyName" className="text-white text-sm">Nome da Empresa *</Label>
-                  <Input
-                    id="companyName"
-                    name="companyName"
-                    type="text"
-                    placeholder="Nome da sua empresa"
-                    value={formData.companyName}
-                    onChange={handleInputChange}
-                    required
-                    className="bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:border-blue-400 h-10"
-                  />
-                </div>
-              </div>
-              
-              <div className="space-y-1">
-                <Label htmlFor="email" className="text-white text-sm">Email *</Label>
-                <Input
-                  id="email"
-                  name="email"
-                  type="email"
-                  placeholder="seu@email.com"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  required
-                  className="bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:border-blue-400 h-10"
-                />
-              </div>
-              
-              <div className="space-y-1">
-                <Label htmlFor="whatsapp" className="text-white text-sm">WhatsApp *</Label>
-                <Input
-                  id="whatsapp"
-                  name="whatsapp"
-                  type="tel"
-                  placeholder="(XX) XXXXX-XXXX"
-                  value={formData.whatsapp}
-                  onChange={handleInputChange}
-                  required
-                  className="bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:border-blue-400 h-10"
-                />
-              </div>
-              
-              <Button
-                type="submit"
-                size="lg"
-                disabled={!isFormValid || isSubmitting}
-                className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-4 text-base rounded-xl shadow-xl hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105"
-              >
-                {isSubmitting ? (
-                  <>
-                    <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
-                    Processando...
-                  </>
-                ) : (
-                  <>
-                    <Download className="mr-2 w-4 h-4" />
-                    Baixar Ebook Gratuito
-                  </>
-                )}
-              </Button>
-            </form>
             
+            <div>
+              <h1 className="text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent">
+                Ebook Gratuito
+              </h1>
+              <p className="text-xl text-blue-100 mb-2">
+                Como a IA pode Revolucionar sua Loja de Móveis Planejados
+              </p>
+              <p className="text-blue-200">
+                Preencha os dados ao lado para receber seu ebook exclusivo
+              </p>
+            </div>
+
             {/* Benefits */}
-            <div className="mt-4 pt-4 border-t border-white/20">
-              <h3 className="text-white font-semibold mb-3 text-sm">O que você vai aprender:</h3>
-              <div className="space-y-1">
+            <div className="text-left space-y-3">
+              <h3 className="text-white font-semibold text-lg">O que você vai aprender:</h3>
+              <div className="space-y-2">
                 {[
                   "Como a IA pode automatizar processos de vendas",
                   "Estratégias para melhorar a experiência do cliente",
@@ -187,14 +100,110 @@ const LeadCapture = () => {
                   "Implementação prática passo a passo"
                 ].map((benefit, index) => (
                   <div key={index} className="flex items-center text-blue-200">
-                    <CheckCircle className="w-3 h-3 mr-2 text-green-400 flex-shrink-0" />
-                    <span className="text-xs">{benefit}</span>
+                    <CheckCircle className="w-4 h-4 mr-3 text-green-400 flex-shrink-0" />
+                    <span className="text-sm">{benefit}</span>
                   </div>
                 ))}
               </div>
             </div>
-          </CardContent>
-        </Card>
+          </div>
+
+          {/* Right Column - Form */}
+          <div>
+            <Card className="bg-white/10 backdrop-blur-xl border border-white/20 shadow-2xl">
+              <CardHeader className="text-center pb-4">
+                <div className="mx-auto w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mb-3">
+                  <BookOpen className="w-6 h-6 text-white" />
+                </div>
+                <CardTitle className="text-xl text-white">Baixe seu Ebook Gratuito</CardTitle>
+                <CardDescription className="text-blue-200 text-sm">
+                  Descubra estratégias práticas para implementar IA em sua loja
+                </CardDescription>
+              </CardHeader>
+              
+              <CardContent>
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    <div className="space-y-1">
+                      <Label htmlFor="fullName" className="text-white text-sm">Nome Completo *</Label>
+                      <Input
+                        id="fullName"
+                        name="fullName"
+                        type="text"
+                        placeholder="Seu nome completo"
+                        value={formData.fullName}
+                        onChange={handleInputChange}
+                        required
+                        className="bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:border-blue-400 h-10"
+                      />
+                    </div>
+                    
+                    <div className="space-y-1">
+                      <Label htmlFor="companyName" className="text-white text-sm">Nome da Empresa *</Label>
+                      <Input
+                        id="companyName"
+                        name="companyName"
+                        type="text"
+                        placeholder="Nome da sua empresa"
+                        value={formData.companyName}
+                        onChange={handleInputChange}
+                        required
+                        className="bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:border-blue-400 h-10"
+                      />
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-1">
+                    <Label htmlFor="email" className="text-white text-sm">Email *</Label>
+                    <Input
+                      id="email"
+                      name="email"
+                      type="email"
+                      placeholder="seu@email.com"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      required
+                      className="bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:border-blue-400 h-10"
+                    />
+                  </div>
+                  
+                  <div className="space-y-1">
+                    <Label htmlFor="whatsapp" className="text-white text-sm">WhatsApp *</Label>
+                    <Input
+                      id="whatsapp"
+                      name="whatsapp"
+                      type="tel"
+                      placeholder="(XX) XXXXX-XXXX"
+                      value={formData.whatsapp}
+                      onChange={handleInputChange}
+                      required
+                      className="bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:border-blue-400 h-10"
+                    />
+                  </div>
+                  
+                  <Button
+                    type="submit"
+                    size="lg"
+                    disabled={!isFormValid || isSubmitting}
+                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-4 text-base rounded-xl shadow-xl hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105 mt-6"
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
+                        Processando...
+                      </>
+                    ) : (
+                      <>
+                        <Download className="mr-2 w-4 h-4" />
+                        Baixar Ebook Gratuito
+                      </>
+                    )}
+                  </Button>
+                </form>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
       </div>
     </div>
   );
