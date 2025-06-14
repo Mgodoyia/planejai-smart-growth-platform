@@ -183,24 +183,6 @@ const PainPoints = () => {
             </Card>
           ))}
         </div>
-        
-        {/* Enhanced Call to Action */}
-        <div className="text-center mt-12 sm:mt-16 lg:mt-20 animate-slideUp delay-500">
-          <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-xl border border-gray-200/50 max-w-2xl mx-auto">
-            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3">
-              Pronto para resolver estes desafios?
-            </h3>
-            <p className="text-gray-600 mb-6 text-sm sm:text-base">
-              Nossa IA transforma cada problema em uma oportunidade de crescimento
-            </p>
-            
-            <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer group">
-              <Zap className="w-5 h-5 group-hover:rotate-12 transition-transform" />
-              <span>Descobrir as Soluções</span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
