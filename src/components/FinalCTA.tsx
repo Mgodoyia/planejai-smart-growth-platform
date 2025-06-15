@@ -90,20 +90,6 @@ const FinalCTA = () => {
               </div>
             ))}
           </div>
-
-          {/* Trust Indicators */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 opacity-60 px-4">
-            {[
-              "🚀 Resultados Imediatos",
-              "💰 Aumento de 300% em Vendas",
-              "⚡ Automação Total",
-              "🎯 Leads Qualificados"
-            ].map((indicator, index) => (
-              <div key={index} className="text-blue-300 font-medium text-sm sm:text-base text-center">
-                {indicator}
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </section>
