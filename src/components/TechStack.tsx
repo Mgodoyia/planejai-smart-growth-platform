@@ -85,7 +85,7 @@ const TechStack = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {techCategories.map((tech, index) => (
             <div 
               key={index} 
@@ -134,47 +134,6 @@ const TechStack = () => {
               </div>
             </div>
           ))}
-        </div>
-        
-        {/* Enhanced Trust Banner */}
-        <div className="text-center">
-          <div className="inline-flex items-center space-x-6 bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 px-8 py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group">
-            <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Shield className="w-6 h-6 text-white" />
-              </div>
-              <div className="text-left">
-                <span className="block text-green-800 font-bold text-lg">99.9% de Uptime</span>
-                <span className="block text-green-600 text-sm">Disponibilidade Garantida</span>
-              </div>
-            </div>
-            
-            <div className="hidden md:block w-px h-12 bg-green-300"></div>
-            
-            <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <CheckCircle className="w-6 h-6 text-white" />
-              </div>
-              <div className="text-left">
-                <span className="block text-blue-800 font-bold text-lg">Conformidade LGPD</span>
-                <span className="block text-blue-600 text-sm">Proteção Total de Dados</span>
-              </div>
-            </div>
-            
-            <div className="hidden lg:block w-px h-12 bg-green-300"></div>
-            
-            <div className="hidden lg:flex items-center space-x-3">
-              <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Badge className="w-6 h-6 text-white bg-transparent border-none p-0 text-lg font-bold">
-                  ✓
-                </Badge>
-              </div>
-              <div className="text-left">
-                <span className="block text-purple-800 font-bold text-lg">ISO 27001</span>
-                <span className="block text-purple-600 text-sm">Certificação Internacional</span>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
