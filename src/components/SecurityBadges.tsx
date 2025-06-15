@@ -81,19 +81,24 @@ const SecurityBadges = () => {
           ))}
         </div>
         <div className="flex justify-center">
-          <div className={`${badges[2].bgColor} rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 max-w-sm w-full`}>
-            <div className="flex flex-col items-center text-center">
-              <div className={`${badges[2].iconBg} p-4 rounded-xl mb-4`}>
-                <badges[2].icon className={`w-8 h-8 ${badges[2].iconColor}`} />
+          {(() => {
+            const thirdBadge = badges[2];
+            return (
+              <div className={`${thirdBadge.bgColor} rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 max-w-sm w-full`}>
+                <div className="flex flex-col items-center text-center">
+                  <div className={`${thirdBadge.iconBg} p-4 rounded-xl mb-4`}>
+                    <thirdBadge.icon className={`w-8 h-8 ${thirdBadge.iconColor}`} />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                    {thirdBadge.title}
+                  </h3>
+                  <p className="text-sm text-gray-600">
+                    {thirdBadge.subtitle}
+                  </p>
+                </div>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">
-                {badges[2].title}
-              </h3>
-              <p className="text-sm text-gray-600">
-                {badges[2].subtitle}
-              </p>
-            </div>
-          </div>
+            );
+          })()}
         </div>
       </div>
 
