@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Play, ArrowRight, Sparkles, Menu, X } from "lucide-react";
@@ -50,7 +49,7 @@ const Hero = () => {
       <div className="absolute bottom-20 right-4 md:right-10 w-32 h-32 md:w-48 md:h-48 bg-gradient-to-br from-indigo-500/10 to-blue-500/10 rounded-full blur-xl animate-pulse delay-700"></div>
       
       {/* Header with Navigation */}
-      <header className="container mx-auto px-4 sm:px-6 pt-6 md:pt-8 relative z-10">
+      <header className="container mx-auto px-4 sm:px-6 pt-6 md:pt-8 relative z-50">
         <nav className="flex items-center justify-between">
           <Logo className="scale-110 sm:scale-125 md:scale-150 hover:scale-125 sm:hover:scale-150 md:hover:scale-160 transition-transform duration-300" />
           
@@ -72,7 +71,7 @@ const Hero = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="lg:hidden p-2 text-blue-100 hover:text-white transition-colors duration-300"
+              className="lg:hidden p-2 text-blue-100 hover:text-white transition-colors duration-300 z-50 relative"
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -90,21 +89,36 @@ const Hero = () => {
         </nav>
 
         {/* Mobile Navigation Menu */}
-        {isMenuOpen && (
-          <div className="lg:hidden absolute top-full left-0 right-0 mt-2 mx-4 bg-white/10 backdrop-blur-xl border border-white/20 rounded-xl shadow-2xl animate-slideUp">
-            <div className="p-4 space-y-3">
-              {navigationItems.map((item) => (
-                <button
-                  key={item.label}
-                  onClick={() => handleNavClick(item.href)}
-                  className="block w-full text-left text-blue-100 hover:text-white hover:bg-white/10 px-4 py-3 rounded-lg transition-all duration-300 font-medium"
-                >
-                  {item.label}
-                </button>
-              ))}
+        <div className={`lg:hidden fixed inset-x-0 top-0 z-40 transition-all duration-300 ease-in-out ${
+          isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+        }`}>
+          {/* Backdrop */}
+          <div 
+            className={`fixed inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300 ${
+              isMenuOpen ? 'opacity-100' : 'opacity-0'
+            }`}
+            onClick={() => setIsMenuOpen(false)}
+          />
+          
+          {/* Menu Content */}
+          <div className={`relative bg-white/10 backdrop-blur-xl border-b border-white/20 shadow-2xl transform transition-transform duration-300 ease-in-out ${
+            isMenuOpen ? 'translate-y-0' : '-translate-y-full'
+          }`}>
+            <div className="container mx-auto px-4 pt-20 pb-6">
+              <div className="space-y-4">
+                {navigationItems.map((item) => (
+                  <button
+                    key={item.label}
+                    onClick={() => handleNavClick(item.href)}
+                    className="block w-full text-left text-blue-100 hover:text-white hover:bg-white/10 px-4 py-4 rounded-lg transition-all duration-300 font-medium text-lg"
+                  >
+                    {item.label}
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
-        )}
+        </div>
       </header>
       
       <div className="container mx-auto px-4 sm:px-6 pt-8 sm:pt-12 md:pt-16 pb-12 sm:pb-16 md:pb-20 relative z-10">
