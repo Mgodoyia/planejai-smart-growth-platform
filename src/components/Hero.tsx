@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Play, ArrowRight, Sparkles, Menu, X, LogIn } from "lucide-react";
@@ -81,11 +80,11 @@ const Hero = () => {
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
 
-            {/* Login Button */}
+            {/* Login Button - Hidden on mobile */}
             <Button 
               size="sm"
               variant="outline"
-              className="bg-transparent border-blue-400 text-blue-200 hover:bg-blue-600 hover:text-white hover:border-blue-600 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl text-xs sm:text-sm px-3 py-2 sm:px-4 sm:py-2"
+              className="hidden lg:flex bg-transparent border-blue-400 text-blue-200 hover:bg-blue-600 hover:text-white hover:border-blue-600 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl text-xs sm:text-sm px-3 py-2 sm:px-4 sm:py-2"
               onClick={handleLoginClick}
             >
               <LogIn className="mr-1 sm:mr-2 w-3 h-3 sm:w-4 sm:h-4" />
