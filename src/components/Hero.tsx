@@ -1,6 +1,7 @@
+
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Play, ArrowRight, Sparkles, Menu, X } from "lucide-react";
+import { Play, ArrowRight, Sparkles, Menu, X, LogIn } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { useState } from "react";
 import Logo from "./Logo";
@@ -32,6 +33,10 @@ const Hero = () => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
     setIsMenuOpen(false);
+  };
+
+  const handleLoginClick = () => {
+    window.open('#', '_blank');
   };
 
   return (
@@ -76,6 +81,17 @@ const Hero = () => {
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
 
+            {/* Login Button */}
+            <Button 
+              size="sm"
+              variant="outline"
+              className="bg-transparent border-blue-400 text-blue-200 hover:bg-blue-600 hover:text-white hover:border-blue-600 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl text-xs sm:text-sm px-3 py-2 sm:px-4 sm:py-2"
+              onClick={handleLoginClick}
+            >
+              <LogIn className="mr-1 sm:mr-2 w-3 h-3 sm:w-4 sm:h-4" />
+              Login
+            </Button>
+
             <Button 
               size="sm"
               className="bg-blue-600 hover:bg-blue-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl text-xs sm:text-sm px-3 py-2 sm:px-4 sm:py-2"
@@ -115,6 +131,18 @@ const Hero = () => {
                     {item.label}
                   </button>
                 ))}
+                
+                {/* Login button for mobile menu */}
+                <button
+                  onClick={() => {
+                    handleLoginClick();
+                    setIsMenuOpen(false);
+                  }}
+                  className="block w-full text-left text-blue-100 hover:text-white hover:bg-white/10 px-4 py-4 rounded-lg transition-all duration-300 font-medium text-lg border-t border-white/10 mt-4 pt-4"
+                >
+                  <LogIn className="inline mr-3 w-5 h-5" />
+                  Login
+                </button>
               </div>
             </div>
           </div>
