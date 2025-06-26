@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Play, ArrowRight, Sparkles, Menu, X, LogIn } from "lucide-react";
+import { Play, ArrowRight, Sparkles, Menu, LogIn, X } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useState } from "react";
 import Logo from "./Logo";
 
@@ -72,13 +73,60 @@ const Hero = () => {
           </div>
 
           <div className="flex items-center space-x-2 md:space-x-4">
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="lg:hidden p-2 text-blue-100 hover:text-white transition-colors duration-300 z-50 relative"
-            >
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
+            {/* Mobile Menu Sheet */}
+            <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
+              <SheetTrigger asChild>
+                <button className="lg:hidden p-2 text-blue-100 hover:text-white transition-colors duration-300 z-50 relative">
+                  <Menu className="w-6 h-6" />
+                </button>
+              </SheetTrigger>
+              <SheetContent side="left" className="w-80 bg-gradient-to-br from-slate-900/95 via-blue-900/95 to-indigo-900/95 backdrop-blur-xl border-blue-400/20 text-white">
+                <div className="flex flex-col h-full">
+                  <div className="flex items-center justify-center py-8">
+                    <Logo className="scale-125" />
+                  </div>
+                  
+                  <nav className="flex-1 space-y-2">
+                    {navigationItems.map((item) => (
+                      <button
+                        key={item.label}
+                        onClick={() => handleNavClick(item.href)}
+                        className="w-full text-left text-blue-100 hover:text-white hover:bg-white/10 px-4 py-4 rounded-lg transition-all duration-300 font-medium text-lg flex items-center"
+                      >
+                        {item.label}
+                      </button>
+                    ))}
+                    
+                    <div className="border-t border-white/10 pt-4 mt-4">
+                      <button
+                        onClick={() => {
+                          handleLoginClick();
+                          setIsMenuOpen(false);
+                        }}
+                        className="w-full text-left text-blue-100 hover:text-white hover:bg-white/10 px-4 py-4 rounded-lg transition-all duration-300 font-medium text-lg flex items-center"
+                      >
+                        <LogIn className="mr-3 w-5 h-5" />
+                        Login
+                      </button>
+                    </div>
+                  </nav>
+                  
+                  <div className="pb-8">
+                    <Button 
+                      size="lg"
+                      className="w-full bg-blue-600 hover:bg-blue-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+                      onClick={() => {
+                        openWhatsApp();
+                        setIsMenuOpen(false);
+                      }}
+                    >
+                      <Sparkles className="mr-2 w-5 h-5" />
+                      Sessão de Estudo
+                    </Button>
+                  </div>
+                </div>
+              </SheetContent>
+            </Sheet>
 
             {/* Login Button - Hidden on mobile */}
             <Button 
